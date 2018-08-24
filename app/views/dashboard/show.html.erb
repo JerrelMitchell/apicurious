@@ -1,0 +1,38 @@
+<main class='dashboard'>
+  <div class="profile">
+    <img class="main-picture" src= <%="#{current_user.avatar_url}"%> alt="user picture"> <br>
+    <div class="profile-text">
+      <h1> <%= current_user.name %> </h1>
+      <h4> <%= current_user.username %></h4>
+    </div>
+    <a href="/<%="#{current_user.username}"%>/repos"> Repositories</a> <br>
+      <%= link_to "Logout", logout_path, method: :delete %>
+  </div>
+
+  <section class="starred">
+    <h3>Starred Repos:<%= @starred_repos.count %></h3>
+    <ul>
+      <% @starred_repos.each do |repo| %>
+      <li><%= link_to repo.name, repo.url %> </li>
+      <% end %>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Followers: <%= @followers.count %> </h3>
+    <ul>
+      <% @followers.each do |follower| %>
+      <li><%= link_to follower.login, follower.url %> </li>
+      <% end %>
+    </ul>
+  </section>
+
+  <section class="following">
+    <h3>Following: <%= @following.count %> </h3>
+    <ul>
+      <% @following.each do |follow| %>
+      <li><%= link_to follow.login, follow.url %> </li>
+      <% end %>
+    </ul>
+  </section>
+</main>

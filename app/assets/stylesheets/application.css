@@ -1,0 +1,71 @@
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black ;
+  height: 75px;
+}
+a.nav-thumb {
+  align-content: center;
+  height: 42px;
+  width: 42px;
+}
+
+img.octocat {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+img.main-picture {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.login {
+  height: 50px;
+  width: 50px;
+  padding-right: 50px;
+}
+
+div.login a {
+  color: white;
+  text-decoration: none;
+  margin: auto;
+}
+
+.login {
+    width: 125px;
+    padding-top: 13px;
+}
+
+.user-thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+}
+
+main.repos-all {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.repo {
+  width: 95%;
+  border: solid black 2px;
+  margin-top: 10px;
+  padding-bottom:: 10px;
+}
+
+.profile {
+  margin-top: 15px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+}

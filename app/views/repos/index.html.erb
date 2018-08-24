@@ -1,0 +1,13 @@
+<main class=repos-all>
+  <h1> <%= current_user.username %>'s Repos </h1>
+
+  <% @repos.each do |repo|  %>
+  <div class="repo">
+    <ul>
+      <li> <%= repo.name %> </li>
+      <li> <%= repo.owner %> </li>
+      <li> <%= repo.description %> </li>
+    </ul>
+  </div>
+  <% end %>
+</main>
